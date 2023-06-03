@@ -163,7 +163,7 @@ section {
 }
 
 .intro > .links > a {
-  color: rgba(255, 0, 0, 0.371);
+  color: #e1306c(255, 0, 0);
   text-decoration: none;
   font-size: 10px;
 }
@@ -630,9 +630,11 @@ section {
   margin-top: 100px;
   height: 100vh;
   display: flex;
+  width: 100vw;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden !important;
 }
 
 .projects > h3 {
@@ -896,6 +898,18 @@ section {
 
   .projects > .project-container > .project > p {
     width: 500px;
+  }
+
+  .contact > form {
+    width: 300px;
+  }
+
+  .contact > form > input[type="submit"] {
+    width: 323px;
+  }
+
+  .contact > form > .group {
+    width: 330px;
   }
 }
 
