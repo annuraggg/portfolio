@@ -70,7 +70,9 @@ const Projects = () => {
         {projects.map((project, index) => {
           return (
             <div className="project" key={index}>
-              <img srcSet={project.img} alt="" />
+              <div className="img">
+                <img srcSet={project.img} alt="" />
+              </div>
               <h4>{project.name}</h4>
               <p dangerouslySetInnerHTML={{ __html: project.desc }}></p>
               <a href={project.github} target="_blank" rel="noreferrer">

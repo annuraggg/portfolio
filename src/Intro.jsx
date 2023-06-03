@@ -36,19 +36,27 @@ const Intro = () => {
           <span ref={el}></span>
         </div>
         <div className="links">
-          <a href="#about" rel="noreferrer">ABOUT</a>
-          <a href="#experience" rel="noreferrer">EXPERIENCE</a>
-          <a href="#skills" rel="noreferrer">SKILLS</a>
-          <a href="#project" rel="noreferrer">PROJECTS</a>
-          <a href="#contact" rel="noreferrer">CONTACT</a>
+          <a href="#about" rel="noreferrer">
+            ABOUT
+          </a>
+          <a href="#experience" rel="noreferrer">
+            EXPERIENCE
+          </a>
+          <a href="#skills" rel="noreferrer">
+            SKILLS
+          </a>
+          <a href="#project" rel="noreferrer">
+            PROJECTS
+          </a>
+          <a href="#contact" rel="noreferrer">
+            CONTACT
+          </a>
         </div>
         <div className="circle">
           <div className="circle2"></div>
         </div>
-        <a href="#about"  rel="noreferrer">
-          <div
-            className="scrolldown animate__animated animate__fadeIn delay-2_5"
-          >
+        <a href="#about" rel="noreferrer" id="scrollbtn">
+          <div className="scrolldown animate__animated animate__fadeIn delay-2_5">
             <div className="chevrons">
               <div className="chevrondown"></div>
               <div className="chevrondown"></div>

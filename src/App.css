@@ -219,6 +219,7 @@ section {
   box-sizing: border-box;
   margin-bottom: 16px;
   cursor: pointer;
+  margin-left: -12px;
 }
 
 .scrolldown::before {
@@ -640,7 +641,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-overflow-y: hidden;
+  overflow-y: hidden;
   overflow-x: hidden !important;
 }
 
@@ -678,13 +679,13 @@ overflow-y: hidden;
   display: flex;
   align-self: center;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   min-width: 95vw;
   max-width: 95vw;
   margin-right: 0px !important;
   color: rgba(240, 248, 255, 0.582);
-  height: 80vh;
+  height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
   transition: 0.3s;
@@ -696,7 +697,14 @@ overflow-y: hidden;
   border-radius: 30px;
 }
 
-.projects > .project-container > .project > img {
+.projects > .project-container > .project > .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
+
+.projects > .project-container > .project > .img > img {
   width: 250px;
   margin: 0;
   padding: 0;
@@ -935,8 +943,13 @@ overflow-y: hidden;
     padding: 0 10px;
   }
 
+  .projects > .project-container {
+    justify-content: space-between;
+    gap: 100px;
+  }
+
   .projects > .project-container > .project {
-    margin-right: 100px;
+    height: 90vh;
   }
 
   .experience > h3 {
