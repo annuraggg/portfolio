@@ -19,7 +19,7 @@ const Skills = () => {
         const element1 = document.getElementById("skills");
 
         if (entry.isIntersecting) {
-          element1.classList.add("animate__flipInX", "animate__animated");
+          element1.classList.add("animate__fadeInDown", "animate__animated");
           entry.target.classList.remove("hidden");
         }
       });
@@ -37,7 +37,7 @@ const Skills = () => {
       if (isElementInViewport(targetSection)) {
         const experience = document.getElementById("skills");
 
-        experience.classList.add("animate__flipInX", "animate__animated");
+        experience.classList.add("animate__fadeInDown", "animate__animated");
         targetSection.classList.remove("hidden");
       } else {
         targetSection.classList.add("hidden");

@@ -63,7 +63,7 @@ const Projects = () => {
     },
   ];
   return (
-    <section className="projects section5" id="project">
+    <section className="projects section5 hidden" id="project">
       <div className="ribbon"></div>
       <h3>Projects</h3>
       <div className="project-container">

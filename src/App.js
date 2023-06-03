@@ -11,7 +11,7 @@ import Contact from "./Contact";
 
 function App() {
   return (
-    <div>
+    <div id="main">
       <Navbar />
       <Intro />
       <About />

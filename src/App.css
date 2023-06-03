@@ -54,6 +54,11 @@ section {
   height: 100vh;
 }
 
+#main {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .navbar {
   box-sizing: border-box;
   display: flex;
@@ -401,6 +406,7 @@ section {
 }
 
 .hidden {
+  width: 100vw;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s linear 0.3s, opacity 0.3s linear;
@@ -515,12 +521,11 @@ section {
 }
 
 .skills {
-  padding: 20px 300px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100vw;
 }
 
 .skills > h3 {
@@ -627,13 +632,15 @@ section {
 }
 
 .projects {
+  margin: 0;
   margin-top: 100px;
   height: 100vh;
   display: flex;
-  width: 100vw;
+  width: 100vw !important; /*TODO: Remove this*/
   align-items: center;
   justify-content: center;
   flex-direction: column;
+overflow-y: hidden;
   overflow-x: hidden !important;
 }
 
@@ -653,8 +660,9 @@ section {
   position: absolute;
   transform: rotate(165deg);
   z-index: -1;
-  height: 40vh;
+  height: 35vh;
   width: 130vw;
+  overflow: hidden;
 }
 
 .projects > .project-container {
@@ -663,6 +671,7 @@ section {
   overflow-x: scroll;
   flex-wrap: nowrap;
   overflow-y: hidden;
+  height: fit-content;
 }
 
 .projects > .project-container > .project {
@@ -673,6 +682,7 @@ section {
   flex-direction: column;
   min-width: 95vw;
   max-width: 95vw;
+  margin-right: 0px !important;
   color: rgba(240, 248, 255, 0.582);
   height: 80vh;
   overflow-y: hidden;
@@ -888,14 +898,6 @@ section {
     padding-bottom: 30px;
   }
 
-  .skills {
-    padding: 20px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
   .projects > .project-container > .project > p {
     width: 500px;
   }
@@ -910,6 +912,20 @@ section {
 
   .contact > form > .group {
     width: 330px;
+  }
+
+  .skills {
+    width: 45vw;
+  }
+
+  .projects {
+    max-width: 100vw;
+  }
+
+  .projects > .ribbon {
+    height: 30vh;
+    width: 150vw;
+    overflow-x: hidden;
   }
 }
 
