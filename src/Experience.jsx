@@ -1,9 +1,54 @@
-import React from "react";
-import sahu from "./img/sahu.jpeg";
+import React, { useEffect } from "react";
+import "animate.css";
 import quasar from "./img/quasar.png";
 import symbiosis from "./img/SIT.png";
+import sahu from "./img/sahu.jpeg";
 
 const Experience = () => {
+  useEffect(() => {
+    const isElementInViewport = (element) => {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        const element1 = document.getElementById("experience");
+
+        if (entry.isIntersecting) {
+          element1.classList.add("animate__fadeInDown", "animate__animated");
+          entry.target.classList.remove("hidden");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.4  ,
+    });
+
+    const targetSection = document.getElementById("experience");
+
+    if (targetSection) {
+      observer.observe(targetSection);
+
+      if (isElementInViewport(targetSection)) {
+        const experience = document.getElementById("experience");
+
+        experience.classList.add("animate__fadeInDown", "animate__animated");
+        targetSection.classList.remove("hidden");
+      } else {
+        targetSection.classList.add("hidden");
+      }
+    }
+  }, []);
+
   const exp = [
     {
       image: quasar,
@@ -68,10 +113,8 @@ const Experience = () => {
     },
   ];
 
-  console.log(exp.length);
-
   return (
-    <div className="experience">
+    <section className="experience section3 hidden" id="experience">
       <h3>EXPERIENCE / Code-Offs</h3>
       <div className="carousel">
         {exp.map((item, index) => {
@@ -102,7 +145,7 @@ const Experience = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

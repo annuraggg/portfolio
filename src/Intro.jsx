@@ -5,9 +5,6 @@ import Typed from "typed.js";
 
 const Intro = () => {
   const el = useRef(null);
-  const scrollToSection = () => {
-    window.location.href = "#about";
-  };
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -28,7 +25,7 @@ const Intro = () => {
 
   return (
     <>
-      <section className="intro" id="intro">
+      <section className="intro section" id="intro">
         <img
           src={Avatar}
           alt=""
@@ -39,23 +36,25 @@ const Intro = () => {
           <span ref={el}></span>
         </div>
         <div className="links">
-          <a href="#about">ABOUT</a>
-          <a href="">EXPERIENCE</a>
-          <a href="">SKILLS</a>
-          <a href="">PROJECTS</a>
+          <a href="#about" rel="noreferrer">ABOUT</a>
+          <a href="#experience" rel="noreferrer">EXPERIENCE</a>
+          <a href="#skills" rel="noreferrer">SKILLS</a>
+          <a href="#project" rel="noreferrer">PROJECTS</a>
+          <a href="#contact" rel="noreferrer">CONTACT</a>
         </div>
         <div className="circle">
           <div className="circle2"></div>
         </div>
-        <div
-          className="scrolldown animate__animated animate__fadeIn delay-2_5"
-          onClick={scrollToSection}
-        >
-          <div className="chevrons">
-            <div className="chevrondown"></div>
-            <div className="chevrondown"></div>
+        <a href="#about"  rel="noreferrer">
+          <div
+            className="scrolldown animate__animated animate__fadeIn delay-2_5"
+          >
+            <div className="chevrons">
+              <div className="chevrondown"></div>
+              <div className="chevrondown"></div>
+            </div>
           </div>
-        </div>
+        </a>
       </section>
     </>
   );

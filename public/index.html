@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link
+      href="%PUBLIC_URL%/favicon-light.ico"
+      rel="icon"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      href="%PUBLIC_URL%/favicon.ico"
+      rel="icon"
+      media="(prefers-color-scheme: dark)"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Anurag Sawant - Full Stack Dev"
-    />
+    <meta name="description" content="Anurag Sawant - Full Stack Dev" />
+    
 
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -39,6 +48,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).on("click", 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $("html, body").animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top,
+          },
+          500
+        );
+      });
+    </script>
     <link rel="stylesheet" href="%PUBLIC_URL%/fa/css/all.css" />
   </body>
 </html>

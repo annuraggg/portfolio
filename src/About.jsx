@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import "animate.css";
 
 const About = () => {
   useEffect(() => {
@@ -26,12 +26,6 @@ const About = () => {
           aboutParagraph.classList.add("animate__fadeInRight");
           aboutParagraph.classList.add("animate__animated");
           entry.target.classList.remove("hidden");
-        } else {
-          aboutHeading.classList.remove("animate__jackInTheBox");
-          aboutHeading.classList.remove("animate__animated");
-          aboutParagraph.classList.remove("animate__fadeInRight");
-          aboutParagraph.classList.remove("animate__animated");
-          entry.target.classList.add("hidden");
         }
       });
     }
@@ -66,7 +60,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="about hidden" id="about">
+    <section className="about hidden section2" id="about">
       <h3 id="about-heading" className="animate__animated">
         About
       </h3>
