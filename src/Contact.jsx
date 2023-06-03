@@ -55,6 +55,7 @@ const Contact = () => {
           infoBox.innerHTML = "Email sent successfully";
           infoBox.style.color = "green";
         } catch (error) {
+          console.log(error);
           infoBox.innerHTML = "Email not sent. Please try again later";
           infoBox.style.color = "red";
         }
