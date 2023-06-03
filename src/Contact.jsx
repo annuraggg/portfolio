@@ -54,6 +54,7 @@ const Contact = () => {
 
           infoBox.innerHTML = "Email sent successfully";
           infoBox.style.color = "green";
+          document.getElementById("contact").reset();
         } catch (error) {
           infoBox.innerHTML = "Email not sent. Please try again later";
           infoBox.style.color = "red";
