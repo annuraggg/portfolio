@@ -4,20 +4,32 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="socials animate__animated animate__slideInLeft">
-        <a href="https://www.instagram.com/annuraggg/" target="_blank" rel="noreferrer">
-          <i className="fa-brands fa-instagram"></i>
+        <a href="https://github.com/annuraggg" target="_blank" rel="noreferrer">
+          <i className="fa-brands fa-github"></i>
         </a>
 
-        <a href="https://www.linkedin.com/in/annuraggg/" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.linkedin.com/in/annuraggg/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i className="fa-brands fa-linkedin-in"></i>
         </a>
 
-        <a href="https://twitter.com/annuragggg" target="_blank" rel="noreferrer">
+        <a
+          href="https://twitter.com/annuragggg"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i className="fa-brands fa-twitter"></i>
         </a>
 
-        <a href="https://github.com/annuraggg" target="_blank" rel="noreferrer">
-          <i className="fa-brands fa-github"></i>
+        <a
+          href="https://www.instagram.com/annuraggg/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-instagram"></i>
         </a>
       </div>
 
