@@ -163,7 +163,7 @@ section {
 }
 
 .intro > .links > a {
-  color: #e1306c(255, 0, 0);
+  color: #e1306c;
   text-decoration: none;
   font-size: 10px;
 }
